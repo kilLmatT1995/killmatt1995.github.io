@@ -262,8 +262,10 @@ h2 {
 
 }
 
+
+
 .link::after {
-    content: url("./images/up-right-arrow.svg");
+    content: url("../images/up-right-arrow.svg");
     display: inline-block;
     width: .4rem;
     margin-right: 0;
