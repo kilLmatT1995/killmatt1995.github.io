@@ -232,7 +232,7 @@ h2 {
 .footer {
     display: grid;
     background-color: white;
-
+    user-select: text;
 }
 
 .slogenGrid {
