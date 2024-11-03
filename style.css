@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=ZCOOL+XiaoWei&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=ZCOOL+XiaoWei&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap');
+
+@font-face {
+    font-family: 'PicNic-Regular';
+    src: url('./fonts/PicNic-Regular.woff');
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eeefde;
+    cursor: url('./images/pixel-14.svg'), url('./images/pixel-05.svg') auto;
+    font-family: 'IBM Plex Mono';
+    font-weight: 300;
+    font-size: .9rem;
+    color: dimgray;
+    text-decoration: none;
+    cursor: url('./images/curser1.png') 4 31, auto;
+}
+
+.PageHeader {
+    position: fixed;
+    top: 2vw;
+    left: 0%;
+    display: block;
+    width: 100%;
+    margin: 0%;
+    display: grid;
+    grid-template-columns: 2fr auto;
+    z-index: 3;
+}
+
+a {
+    color: dimgray;
+    text-decoration: none;
+}
+
+.navItems {
+    color: #ff45b3;
+    border: solid .1vw #ff57b9;
+    background-color: #e4ff16;
+}
+
+.navText {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    text-decoration: none;
+    line-height: 1;
+    letter-spacing: -.03vw;
+    font-size: 3.5vw;
+    text-align: center;
+    border-radius: 3vw;
+    padding: 1vw;
+    margin-left: 1vw;
+}
+
+.navImg {
+    position: absolute;
+    width: 6vw;
+    height: 6vw;
+    border-radius: 50%;
+    right: 1%;
+
+}
+
+@media screen and (orientation:portrait) {
+    .keyVisual {
+        height: 200vw;
+        position: relative;
+    }
+
+}
+
+@media screen and (orientation:landscape) {
+    .keyVisual {
+        height: 65vw;
+        /* background-color: #ff45b3; */
+    }
+
+}
+
+.keyVisual {
+    width: 100%;
+    position: relative;
+}
+
+h1 {
+    font-family: 'PicNic-Regular';
+    font-size: 10vw;
+    color: white;
+    text-align: center;
+    background-color: #e1ff00;
+}
+
+.artWorkGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: .7rem;
+    margin: 2vw;
+    align-items: flex-start;
+
+}
+
+.gridItems {
+    width: 100%;
+    border: solid white .4rem;
+    border-radius: .7rem;
+}

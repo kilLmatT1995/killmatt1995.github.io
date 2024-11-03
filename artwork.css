@@ -1,0 +1,150 @@
+    .keyVisual {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #v2 {
+        position: relative;
+    }
+
+    #notebook {
+        position: relative;
+        width: 100%;
+    }
+
+    #pin {
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        width: 10vw;
+    }
+
+    .keyVisual p {
+        font-family: 'Monsieur La Doulaise', Courier, monospace;
+        position: absolute;
+        line-height: 150%;
+        color: #c2bcbc;
+    }
+
+    #sun {
+        position: absolute;
+        top: 10%;
+        left: 63%;
+        width: 20%;
+        animation: rotate 3s steps(3) infinite;
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(1turn);
+        }
+    }
+
+    #pen {
+        position: absolute;
+        top: 15%;
+        left: 5%;
+        width: 60%;
+    }
+
+    #nc1 {
+        top: 23%;
+        left: 16%
+    }
+
+    #nc2 {
+        top: 36%;
+        left: 16%
+    }
+
+    #nc3 {
+        top: 49%;
+        left: 23%
+    }
+
+    #nc4 {
+        position: absolute;
+        top: 33%;
+        left: 55%;
+        width: 40%;
+
+    }
+
+    @media screen and (orientation:portrait) {
+
+        #bear,
+        #eraser {
+            display: none;
+            position: absolute;
+        }
+
+        #v2 {
+            width: 80%;
+        }
+
+
+        .keyVisual p {
+            font-size: 7vw;
+        }
+
+        #intro1,
+        #intro2 {
+            display: block;
+            position: relative;
+            text-align: center;
+            font-size: 15vw;
+            line-height: 1;
+            color: rgb(251, 255, 243);
+        }
+
+        #key {
+            position: relative;
+            width: 20%;
+            left: 40%;
+        }
+    }
+
+    @media screen and (orientation:landscape) {
+        #v2 {
+            width: 70%;
+            margin: auto;
+        }
+
+        #bear {
+            display: block;
+            position: absolute;
+            top: 29%;
+            left: 0%;
+            width: 13vw;
+        }
+
+        #eraser {
+            display: block;
+            position: absolute;
+            top: 35%;
+            right: 3%;
+            width: 8vw;
+        }
+
+        .keyVisual p {
+            font-size: 6vw;
+        }
+
+        #intro1,
+        #intro2 {
+            display: none;
+        }
+
+        #key {
+            position: relative;
+            width: 15%;
+            left: 40%;
+            transform: translateY(-10%);
+        }
+    }

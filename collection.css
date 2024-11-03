@@ -1,0 +1,271 @@
+@keyframes rotateItems {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-10deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    75% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+svg {
+    pointer-events: visibleFill;
+}
+
+.noteItems {
+    position: absolute;
+}
+
+.noteItems:hover,
+.noteItems:active {
+    animation: rotateItems 0.5s;
+    transform-origin: top;
+}
+
+
+#receipt:hover,
+#receipt:active {
+    filter: invert();
+}
+
+
+
+@media screen and (orientation:landscape) {
+    #receipt {
+        height: 100%;
+        position: absolute;
+        left: 15%;
+        top: 5%;
+    }
+
+    #apple {
+        top: 20%;
+        left: 5%;
+        width: 10vw;
+    }
+
+    #water {
+        top: 13%;
+        left: 75%;
+        width: 10vw;
+    }
+
+
+    #weed {
+        top: 71%;
+        left: 9%;
+        width: 11vw;
+    }
+
+    #dog {
+        top: 41%;
+        left: 0%;
+        width: 13vw;
+    }
+
+    #doll {
+        top: 31%;
+        right: 5%;
+        width: 12vw;
+    }
+
+    #camera {
+        top: 71%;
+        left: 70%;
+        width: 12vw;
+    }
+
+    #sun {
+        top: 71%;
+        left: 81%;
+        width: 12vw;
+    }
+
+    #camera {
+        top: 0%;
+        left: 21%;
+        width: 12vw;
+    }
+
+    #hohoho {
+        top: 79%;
+        left: 21%;
+        width: 19vw;
+    }
+
+    #beetle {
+        top: 2%;
+        left: 59%;
+        width: 11vw;
+    }
+
+    #cake {
+        top: 79%;
+        left: 63%;
+        width: 10vw;
+    }
+}
+
+@media screen and (orientation:portrait) {
+    #receipt {
+        width: 100%;
+        position: absolute;
+        top: 27%;
+    }
+
+    #apple {
+        top: 25%;
+        left: 10%;
+        width: 10vw;
+    }
+
+    #water {
+        top: 23%;
+        left: 77%;
+        width: 15vw;
+    }
+
+
+    #weed {
+        top: 71%;
+        left: 12%;
+        width: 15vw;
+    }
+
+    #dog {
+        top: 47.5%;
+        left: 3%;
+        width: 17vw;
+    }
+
+    #doll {
+        top: 41%;
+        right: 0%;
+        width: 19vw;
+    }
+
+    #sun {
+        top: 73%;
+        right: 3%;
+        width: 12vw;
+    }
+
+    #camera {
+        top: 12%;
+        left: 29%;
+        width: 12vw;
+    }
+
+    #hohoho {
+        top: 78%;
+        left: 31%;
+        width: 20vw;
+    }
+
+    #beetle {
+        top: 12%;
+        left: 57%;
+        width: 12vw;
+    }
+
+    #cake {
+        top: 79%;
+        left: 63%;
+        width: 12vw;
+    }
+}
+
+.slogenBox {
+    width: 30%;
+    margin: 1rem auto;
+    background-color: rgb(255, 255, 255, .3);
+
+
+}
+
+#slogenBoxBackground {
+    color: #777;
+    background-image: url('./images/van-gogh-backgroung-1.png');
+}
+
+.slogen {
+    text-align: center;
+    font-family: "ZCOOL XiaoWei", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.grey {
+    background-color: #eeefde;
+    color: white;
+}
+
+.white {
+    background-color: white;
+    color: #eeefde;
+}
+
+h2 {
+    line-height: 1.2;
+}
+
+.paddingTop {
+    padding-top: 3rem;
+}
+
+.paddingBottom {
+    padding-bottom: 3rem;
+}
+
+.footer {
+    display: grid;
+    background-color: white;
+
+}
+
+.slogenGrid {
+    display: grid;
+}
+
+@media screen and (max-width: 600px) {
+    .footer {
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 600px) {
+    .footer {
+        grid-template-columns: 1fr 1fr;
+        place-items: left;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    .footer {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        place-items: center;
+    }
+
+}
+
+.link::after {
+    content: url("./images/up-right-arrow.svg");
+    display: inline-block;
+    width: .4rem;
+    margin-right: 0;
+    margin-left: .1rem;
+}
