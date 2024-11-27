@@ -1,12 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=ZCOOL+XiaoWei&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=ZCOOL+XiaoWei&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap');
 
 @font-face {
     font-family: 'PicNic-Regular';
     src: url('../fonts/PicNic-Regular.woff');
 }
+
+@font-face {
+    font-family: 'Monsieur La Doulaise';
+    src: url('../fonts/MonsieurLaDoulaise-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'DepartureMono-Regular';
+    src: url('../fonts/DepartureMono-Regular.woff2');
+}
+
 
 *,
 *::after,
@@ -26,6 +34,54 @@ body {
     color: dimgray;
     text-decoration: none;
     cursor: url('./images/curser1.png') 4 31, auto;
+}
+
+.mask {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #fefff1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    /* opacity: 1; */
+    pointer-events: none;
+    touch-action: none;
+}
+
+.timer {
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-70%);
+    font-family: DepartureMono-Regular;
+    color: #dd3ea0;
+
+}
+
+@media (pointer: coarse) {
+
+    /* 在触摸屏设备上应用的样式 */
+    .mask {
+        opacity: 0;
+        transition: opacity 1s linear;
+    }
+}
+
+@media (pointer: fine) {
+
+    /* 在非触摸屏设备上应用的样式 */
+    .mask {
+        opacity: .95;
+        transition: opacity 2s linear 7s;
+    }
+
+    body:hover .mask {
+        opacity: 0;
+        transition: opacity 0s;
+    }
 }
 
 .PageHeader {
@@ -79,12 +135,19 @@ a {
         position: relative;
     }
 
+    .timer {
+        font-size: 16vw;
+    }
 }
 
 @media screen and (orientation:landscape) {
     .keyVisual {
         height: 65vw;
         /* background-color: #ff45b3; */
+    }
+
+    .timer {
+        font-size: 7rem;
     }
 
 }
